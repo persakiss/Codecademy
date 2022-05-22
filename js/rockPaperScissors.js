@@ -6,7 +6,7 @@ const getRandomInt = max => {
 // Function to get a user input
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
-    if (userInput == 'rock' || userInput == 'paper' || userInput == 'scissors') {
+    if (userInput == 'rock' || userInput == 'paper' || userInput == 'scissors' || userInput == 'bomb') {
         return userInput;
     } else {
         console.log("error");
@@ -32,8 +32,15 @@ const getComputerChoice = _ => {
 // Logic function determining winner
 const determineWinner = (userChoice, pcChoice) => {
     let winner = undefined;
+
+    // Equal selections tie game
     if (userChoice === pcChoice) {
         winner = 'tie';
+    } 
+    
+    // Bomb selection
+    if (userChoice === 'bomb') {
+        winner = 'user';
     }
 
     // User enters rock
@@ -79,4 +86,4 @@ const playGame = choice => {
 }
 
 // Put user input here to start the game
-playGame('scissors');
+playGame('paper');
