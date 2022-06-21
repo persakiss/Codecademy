@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import './Playlist.css'
 
-export class Playlist extends Component {
+export class Playlist extends React.Component {
   render() {
     return (
       <div className="Playlist">

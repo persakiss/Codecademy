@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import './Track.css';
 
-export class Track extends Component {
+class Track extends React.Component {
   renderAction() {
     this.props.isRemoval && <button className="Track-action">-</button>
     !this.props.isRemoval && <button className="Track-action">+</button>
